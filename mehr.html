@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mehr dazu | Re:Form</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+    .delay-1 { animation-delay: 0.3s; }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-white to-purple-50 text-gray-900 leading-relaxed">
 
   <section class="px-6 py-12 md:py-20 max-w-3xl mx-auto">
-    <h1 class="text-4xl font-bold text-purple-800 mb-8">Mehr dazu</h1>
+    <h1 class="text-4xl font-bold text-purple-800 mb-8 fade-in-up delay-1">Mehr dazu</h1>
 
     <p class="mb-6">
       Re:Form ist nicht nur eine Idee – es ist eine Initialzündung.  
@@ -41,4 +49,9 @@
       <a href="mailto:reform-earth@proton.me" class="text-purple-700 underline text-lg">reform-earth@proton.me</a>
     </div>
 
-    <footer class="mt-16 text-sm text-pu
+    <footer class="mt-16 text-sm text-purple-600 border-t border-purple-100 pt-6">
+      &copy; 2025 Re:Form. A Nova Era Begins. <a href="index.html" class="underline text-purple-700 hover:text-purple-900">Zurück zur Startseite</a>
+    </footer>
+  </section>
+</body>
+</html>
