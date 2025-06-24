@@ -7,23 +7,14 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
   <style>
-    .header {
-      height: 100vh;
-      background: linear-gradient(to bottom right, #f8f7ff, #e8e9f3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-    .logo {
-      width: 200px;
+    .logo-fade {
+      width: 120px;
       opacity: 0;
-      animation: fadeInFloat 3s ease-out forwards;
+      animation: fadeInFloat 2s ease-out forwards;
     }
     @keyframes fadeInFloat {
       0% {
-        transform: translateY(20px);
+        transform: translateY(-10px);
         opacity: 0;
       }
       100% {
@@ -33,17 +24,16 @@
     }
   </style>
 </head>
-<body class="text-gray-800">
-
-  <!-- Header mit animiertem Logo -->
-  <header class="header">
-    <img src="reform-logo.png" alt="Re:Form Logo" class="logo" />
+<body class="bg-gradient-to-b from-white to-purple-50 text-gray-800">
+  <!-- Logo oben links -->
+  <header class="flex justify-between items-center px-6 py-4">
+    <img src="A_digital_vector_graphic_features_the_text__Re_For.png" alt="Re:Form Logo" class="logo-fade">
   </header>
 
-  <!-- Inhalt -->
-  <main class="max-w-3xl mx-auto px-6 py-12">
+  <!-- Hauptinhalt -->
+  <main class="max-w-3xl mx-auto px-6 py-8">
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-purple-800 mb-4">Einführung</h2>
+      <h1 class="text-4xl font-bold text-purple-800 mb-4">Re:Form</h1>
       <p class="text-lg text-gray-700">
         Unsere Welt steht vor neuen Herausforderungen. Klimakrise, Ressourcenknappheit, soziale Ungleichheit –
         Symptome eines Systems, das zwar funktioniert, aber nicht mehr für das, was es eigentlich schützen sollte.
@@ -65,8 +55,9 @@
       </ul>
     </section>
 
-    <section class="text-center">
+    <section class="flex flex-col sm:flex-row justify-center gap-4">
       <a href="manifest.html" class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-xl transition">Manifest lesen</a>
+      <a href="mehr.html" class="inline-block bg-white border border-purple-300 hover:border-purple-700 text-purple-700 font-semibold py-3 px-6 rounded-xl transition">Mehr dazu</a>
     </section>
   </main>
 
