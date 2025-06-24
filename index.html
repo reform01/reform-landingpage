@@ -5,29 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Re:Form – A Nova Era Begins</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-white to-purple-100 text-gray-900 leading-relaxed">
   <header class="text-center py-20 md:py-24 px-4">
-    <h1 class="text-4xl md:text-6xl font-extrabold text-purple-900 drop-shadow-md">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-purple-900 drop-shadow-md fade-in-up delay-1">
       Re:Form – A Nova Era Begins
     </h1>
-    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
+    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto fade-in-up delay-2">
       Der Kapitalismus braucht ein Update. Wir bauen den Weg dorthin.
     </p>
-    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
-  <a href="#manifest" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">
-    Manifest lesen
-  </a>
-  <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">
-    Mitdenken
-  </a>
-  <a href="mehr.html" class="text-purple-700 underline mt-4 md:mt-0 hover:text-purple-900 transition">
-    Mehr dazu →
-  </a>
-</div>
+    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-4 fade-in-up delay-3">
+      <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">
+        Manifest lesen
+      </a>
+      <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">
+        Mitdenken
+      </a>
+      <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">
+        Mehr dazu
+      </a>
+    </div>
   </header>
 
-  <section id="Einführung" class="py-20 pb-16 px-4 bg-white text-center">
+  <section id="manifest" class="py-20 pb-16 px-4 bg-white text-center">
     <h2 class="text-3xl font-bold text-purple-800 mb-6">Einführung</h2>
     <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
       Re:Form steht für einen regenerativen Kapitalismus. Gewinne durch Klimaschutz, Innovation durch Erhalt, Wohlstand durch Verantwortung. Wir fordern:
