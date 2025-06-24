@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum & Datenschutz | Re:Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 leading-relaxed px-6 py-10 max-w-3xl mx-auto">
+  <h1 class="text-3xl font-bold text-purple-800 mb-6">Impressum & Datenschutz</h1>
+
+  <h2 class="text-xl font-semibold mt-8 mb-2">Impressum</h2>
+  <p>
+    Diese Website wird betrieben unter dem Pseudonym <strong>Re:Form</strong>.<br />
+    Kontakt: <a href="mailto:reform-earth@proton.me" class="text-purple-700 underline">reform-earth@proton.me</a><br />
+    Es handelt sich um ein ideelles, nicht-kommerzielles Projekt ohne Gewinnerzielungsabsicht.<br />
+    Hosting durch: Netlify, San Francisco, USA
+  </p>
+
+  <h2 class="text-xl font-semibold mt-8 mb-2">Datenschutzerklärung</h2>
+  <p>
+    Diese Website speichert keine personenbezogenen Daten.<br />
+    Beim Besuch der Seite wird lediglich eine anonymisierte IP durch den Hosting-Dienstleister (Netlify) erfasst.<br />
+    Es werden keine Cookies gesetzt, keine Tracking-Tools verwendet und keine Analyse durchgeführt.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-8 mb-2">Nutzung der Inhalte</h2>
+  <p>
+    Alle Inhalte dieser Seite dürfen nichtkommerziell unter Namensnennung weiterverwendet werden (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" target="_blank" class="text-purple-700 underline">CC BY-NC-SA 4.0</a>).
+  </p>
+
+  <footer class="mt-12 text-sm text-gray-500">
+    &copy; 2025 Re:Form. A Nova Era Begins.
+  </footer>
+</body>
+</html>
