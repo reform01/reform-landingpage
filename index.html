@@ -22,18 +22,22 @@
     .zoom-bg {
       animation: slowZoom 10s ease-in-out infinite alternate;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+    .logo-font {
+      font-family: 'Orbitron', sans-serif;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
   <!-- Hero Section -->
-  <section class="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6">
-    <div class="absolute inset-0 z-0 flex items-start justify-center pt-12">
+  <section class="relative flex flex-col items-center justify-start min-h-screen bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6 pt-10">
+    <div class="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
       <img src="reform-logo.png" alt="Re:Form Logo" class="w-3/5 max-w-xl opacity-10 zoom-bg">
     </div>
 
-    <div class="relative z-10 pt-48">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 fade-in-up" style="animation-delay: 0.5s; animation-fill-mode: both;">Re:Form</h1>
+    <div class="relative z-10 pt-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 fade-in-up logo-font" style="animation-delay: 0.5s; animation-fill-mode: both;">Re:Form</h1>
       <p class="mt-3 text-lg text-purple-700 uppercase tracking-widest fade-in-up" style="animation-delay: 1s; animation-fill-mode: both;">A Nova Era Begins</p>
       <p class="mt-6 text-xl md:text-2xl text-gray-700 max-w-xl mx-auto fade-in-up" style="animation-delay: 1.5s; animation-fill-mode: both;">
         Der Kapitalismus braucht ein Update.<br />
