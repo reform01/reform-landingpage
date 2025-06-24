@@ -29,6 +29,12 @@
       100% { transform: scale(1.05); }
     }
 
+    @keyframes slideLogo {
+      0% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      100% { transform: translateX(-10px); }
+    }
+
     .fade-in-up {
       opacity: 0;
       animation: fadeInUp 1s ease-out forwards;
@@ -37,6 +43,10 @@
     .zoom-bg {
       animation: slowZoom 10s ease-in-out infinite alternate;
     }
+
+    .slide-logo {
+      animation: slideLogo 20s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
@@ -44,7 +54,7 @@
   <!-- Hero Section -->
   <section class="relative flex flex-col items-center justify-start bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6 pt-12 pb-10">
     <div class="absolute top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
-      <img src="reform-logo.png" alt="Re:Form Logo" class="w-2/3 max-w-xl opacity-10 zoom-bg">
+      <img src="reform-logo.png" alt="Re:Form Logo" class="w-2/3 max-w-xl opacity-10 zoom-bg slide-logo">
     </div>
 
     <div class="relative z-10 pt-10">
