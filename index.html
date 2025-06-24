@@ -6,59 +6,71 @@
   <title>Re:Form – A Nova Era Begins</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .header {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #f8f7ff, #e8e9f3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
     }
-    .fade-in-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
+    .logo {
+      width: 200px;
+      opacity: 0;
+      animation: fadeInFloat 3s ease-out forwards;
+    }
+    @keyframes fadeInFloat {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
-<body class="bg-gradient-to-b from-white to-purple-100 text-gray-900 leading-relaxed">
-
-  <header class="text-center py-20 md:py-24 px-4">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 drop-shadow-md fade-in-up delay-1">
-      Re:Form
-    </h1>
-    <p class="mt-2 text-lg text-purple-700 tracking-widest uppercase">A Nova Era Begins</p>
-    <p class="mt-6 text-xl md:text-2xl text-gray-700 max-w-xl mx-auto fade-in-up delay-2">
-      Der Kapitalismus braucht ein Update.<br />
-      Unsere Wirtschaft funktioniert – aber nicht mehr für das, was sie eigentlich schützen sollte.
-    </p>
-    <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 fade-in-up delay-3">
-      <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Manifest lesen</a>
-      <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">Mitdenken</a>
-      <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">Mehr dazu</a>
-    </div>
+<body class="text-gray-800">
+  <!-- Header mit animiertem Logo -->
+  <header class="header">
+    <img src="A_digital_vector_graphic_features_the_text_&quot;Re:For.png" alt="Re:Form Logo" class="logo" />
   </header>
 
-  <section id="manifest" class="py-20 pb-16 px-4 bg-white text-center">
-    <h2 class="text-3xl font-bold text-purple-800 mb-6">Einführung</h2>
-    <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
-      Re:Form steht für einen regenerativen Kapitalismus. Gewinne durch Klimaschutz, Innovation durch Erhalt, Wohlstand durch Verantwortung. Wir fordern:
-    </p>
-    <ul class="list-disc list-inside space-y-2 mt-6 text-left max-w-xl mx-auto text-gray-700">
-      <li>Ein Preis für Natur und Biodiversität</li>
-      <li>Steuervorteile für ökologisches Wirtschaften</li>
-      <li>Impact als Zugang zu Kapital</li>
-      <li>Transparente ökologische Wirkung</li>
-      <li>Globale Handelsvorteile für Schutzstaaten</li>
-    </ul>
-  </section>
+  <!-- Inhalt -->
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-purple-800 mb-4">Einführung</h2>
+      <p class="text-lg text-gray-700">
+        Unsere Welt steht vor neuen Herausforderungen. Klimakrise, Ressourcenknappheit, soziale Ungleichheit –
+        Symptome eines Systems, das zwar funktioniert, aber nicht mehr für das, was es eigentlich schützen sollte.
+      </p>
+    </section>
 
-  <section id="kontakt" class="pt-12 pb-20 px-4 bg-purple-50 text-center">
-    <h2 class="text-3xl font-bold text-purple-800 mb-6">Kontakt</h2>
-    <p class="text-gray-700 mb-4">
-      Du willst mehr wissen oder mitgestalten? Schreib uns anonym oder unter Pseudonym:
-    </p>
-    <a href="mailto:reform-earth@proton.me" class="text-purple-700 underline text-lg">reform-earth@proton.me</a>
-  </section>
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-purple-700 mb-3">Der Kapitalismus braucht ein Update.</h2>
+      <p class="mb-4">
+        Unsere Wirtschaft ist stark – aber nicht vorbereitet auf das, was kommt. Wir glauben, dass folgende Prinzipien
+        den Weg weisen könnten:
+      </p>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Ein Preis für Natur und Biodiversität</li>
+        <li>Steuervorteile für ökologisches Wirtschaften</li>
+        <li>Impact als Zugang zu Kapital</li>
+        <li>Transparente ökologische Wirkung</li>
+        <li>Globale Handelsvorteile für Schutzstaaten</li>
+      </ul>
+    </section>
 
-  <footer class="py-8 text-sm text-purple-600 text-center">
-    &copy; 2025 Re:Form. A Nova Era Begins.<br />
-    <a href="impressum.html" class="underline text-purple-700 hover:text-purple-900">Impressum & Datenschutz</a>
+    <section class="text-center">
+      <a href="manifest.html" class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-xl transition">Manifest lesen</a>
+    </section>
+  </main>
+
+  <footer class="py-6 text-sm text-center text-purple-600">
+    &copy; 2025 Re:Form. A Nova Era Begins.<br>
+    <a href="impressum.html" class="underline hover:text-purple-900">Impressum & Datenschutz</a>
   </footer>
 </body>
 </html>
