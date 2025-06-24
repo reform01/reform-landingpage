@@ -8,57 +8,44 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <style>
     @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
+      0% { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-    .fade-in-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
-
-    @keyframes slideInLogo {
-      0% { transform: translateX(-100%); opacity: 0; }
-      60% { opacity: 0.15; }
-      100% { transform: translateX(0); opacity: 0.15; }
+    @keyframes slowZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
     }
-    .logo-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 80%;
-      max-width: 700px;
-      z-index: 0;
-      opacity: 0.15;
-      animation: slideInLogo 3s ease-out forwards;
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
     }
-    .relative-header {
-      position: relative;
-      z-index: 10;
+    .zoom-bg {
+      animation: slowZoom 10s ease-in-out infinite alternate;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-white to-purple-100 text-gray-900 leading-relaxed">
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
 
-  <!-- Logo als Hintergrund im Header -->
-  <div class="absolute top-8 left-0 w-full flex justify-center">
-    <img src="reform-logo.png" alt="Re:Form Logo" class="logo-bg">
-  </div>
-
-  <header class="relative-header text-center py-20 md:py-24 px-4">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 drop-shadow-md fade-in-up delay-1">
-      Re:Form
-    </h1>
-    <p class="mt-2 text-lg text-purple-700 tracking-widest uppercase">A Nova Era Begins</p>
-    <p class="mt-6 text-xl md:text-2xl text-gray-700 max-w-xl mx-auto fade-in-up delay-2">
-      Der Kapitalismus braucht ein Update.<br />
-      Unsere Wirtschaft funktioniert – aber nicht mehr für das, was sie eigentlich schützen sollte.
-    </p>
-    <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 fade-in-up delay-3">
-      <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Unsere Vision</a>
-      <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">Mitdenken</a>
-      <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">Mehr dazu</a>
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6">
+    <div class="absolute inset-0 z-0 flex items-center justify-center">
+      <img src="reform-logo.png" alt="Re:Form Logo" class="w-3/4 max-w-2xl opacity-10 zoom-bg">
     </div>
-  </header>
+
+    <div class="relative z-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 fade-in-up" style="animation-delay: 0.5s; animation-fill-mode: both;">Re:Form</h1>
+      <p class="mt-3 text-lg text-purple-700 uppercase tracking-widest fade-in-up" style="animation-delay: 1s; animation-fill-mode: both;">A Nova Era Begins</p>
+      <p class="mt-6 text-xl md:text-2xl text-gray-700 max-w-xl mx-auto fade-in-up" style="animation-delay: 1.5s; animation-fill-mode: both;">
+        Der Kapitalismus braucht ein Update.<br />
+        Unsere Wirtschaft funktioniert – aber nicht mehr für das, was sie eigentlich schützen sollte.
+      </p>
+      <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-4 fade-in-up" style="animation-delay: 2s; animation-fill-mode: both;">
+        <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Unsere Vision</a>
+        <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">Mitdenken</a>
+        <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">Mehr dazu</a>
+      </div>
+    </div>
+  </section>
 
   <section id="manifest" class="py-20 pb-16 px-4 bg-white text-center">
     <h2 class="text-3xl font-bold text-purple-800 mb-6">Einführung</h2>
