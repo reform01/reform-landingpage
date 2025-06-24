@@ -16,22 +16,35 @@
     .delay-2 { animation-delay: 0.6s; }
     .delay-3 { animation-delay: 0.9s; }
 
-    .logo {
-      width: 100px;
-      opacity: 0;
-      animation: fadeInUp 1.2s ease-out forwards;
-      animation-delay: 0.2s;
+    @keyframes slideInLogo {
+      0% { transform: translateX(-100%); opacity: 0; }
+      60% { opacity: 0.15; }
+      100% { transform: translateX(0); opacity: 0.15; }
+    }
+    .logo-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      max-width: 700px;
+      z-index: 0;
+      opacity: 0.15;
+      animation: slideInLogo 3s ease-out forwards;
+    }
+    .relative-header {
+      position: relative;
+      z-index: 10;
     }
   </style>
 </head>
 <body class="bg-gradient-to-b from-white to-purple-100 text-gray-900 leading-relaxed">
 
-  <!-- Logo oben links -->
-  <div class="absolute top-4 left-4 z-10">
-    <img src="reform-logo.png" alt="Re:Form Logo" class="logo">
+  <!-- Logo als Hintergrund im Header -->
+  <div class="absolute top-8 left-0 w-full flex justify-center">
+    <img src="reform-logo.png" alt="Re:Form Logo" class="logo-bg">
   </div>
 
-  <header class="text-center py-20 md:py-24 px-4">
+  <header class="relative-header text-center py-20 md:py-24 px-4">
     <h1 class="text-5xl md:text-6xl font-extrabold text-purple-900 drop-shadow-md fade-in-up delay-1">
       Re:Form
     </h1>
@@ -41,7 +54,7 @@
       Unsere Wirtschaft funktioniert – aber nicht mehr für das, was sie eigentlich schützen sollte.
     </p>
     <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 fade-in-up delay-3">
-<a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Unsere Vision</a>
+      <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Unsere Vision</a>
       <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">Mitdenken</a>
       <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">Mehr dazu</a>
     </div>
