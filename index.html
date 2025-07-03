@@ -51,39 +51,34 @@
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
   <!-- Navigation -->
-  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-purple-800 tracking-tight" style="font-family: 'Rajdhani', sans-serif;">
-        Re:Form
-      </a>
-
-      <!-- Desktop Nav -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end items-center">
       <nav class="hidden md:flex space-x-6 text-purple-800 font-medium">
         <a href="manifest.html" class="hover:underline">Vision</a>
         <a href="mehr.html" class="hover:underline">Mehr</a>
         <a href="token.html" class="hover:underline">Token</a>
         <a href="fragen_und_bedenken.html" class="hover:underline">Fragen?</a>
-        <a href="#kontakt" class="bg-purple-700 text-white px-4 py-2 rounded-xl hover:bg-purple-800 transition">Mitdenken</a>
+        <a href="#kontakt" class="hover:underline">Mitdenken</a>
       </nav>
-
-      <!-- Mobile Toggle -->
-      <button id="menu-toggle" class="md:hidden text-purple-800 focus:outline-none">
-        ☰
-      </button>
+      <button id="menu-btn" class="md:hidden focus:outline-none text-purple-800 text-2xl">☰</button>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-purple-800 bg-white/95 shadow-md">
-      <a href="manifest.html" class="block">Vision</a>
-      <a href="mehr.html" class="block">Mehr</a>
-      <a href="token.html" class="block">Token</a>
-      <a href="fragen_und_bedenken.html" class="block">Fragen?</a>
-      <a href="#kontakt" class="block bg-purple-700 text-white px-4 py-2 rounded-xl mt-2 text-center">Mitdenken</a>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="manifest.html" class="block text-gray-700 hover:text-purple-700">Vision</a>
+      <a href="mehr.html" class="block text-gray-700 hover:text-purple-700">Mehr</a>
+      <a href="token.html" class="block text-gray-700 hover:text-purple-700">Token</a>
+      <a href="fragen_und_bedenken.html" class="block text-gray-700 hover:text-purple-700">Fragen?</a>
+      <a href="#kontakt" class="block text-purple-700 font-semibold">Mitdenken</a>
     </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative flex flex-col items-center justify-start bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6 pt-20 pb-16">
+  <!-- Hero -->
+  <section class="relative flex flex-col items-center justify-start bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6 pt-12 pb-10">
     <div class="absolute top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
       <img src="reform-logo.png" alt="Re:Form Logo" class="w-2/3 max-w-xl opacity-10 zoom-bg slide-logo">
     </div>
@@ -133,20 +128,5 @@
     <a href="impressum.html" class="underline text-purple-700 hover:text-purple-900">Impressum & Datenschutz</a>
   </footer>
 
-  <!-- Mobile Menu Script -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
-    });
-  </script>
 </body>
 </html>
