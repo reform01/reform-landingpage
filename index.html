@@ -50,7 +50,37 @@
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
-  <!-- Header -->
+  <!-- Navigation -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-purple-800 font-extrabold text-xl tracking-widest" style="font-family: 'Rajdhani', sans-serif;">Re:Form</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-purple-700">Start</a>
+        <a href="manifest.html" class="text-gray-700 hover:text-purple-700">Vision</a>
+        <a href="mehr.html" class="text-gray-700 hover:text-purple-700">Mehr</a>
+        <a href="token.html" class="text-gray-700 hover:text-purple-700">Token</a>
+        <a href="fragen_und_bedenken.html" class="text-gray-700 hover:text-purple-700">Fragen?</a>
+        <a href="#kontakt" class="text-purple-700 font-semibold border border-purple-300 px-3 py-1 rounded hover:bg-purple-100 transition">Kontakt</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none text-purple-800 text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block text-gray-700 hover:text-purple-700">Start</a>
+      <a href="manifest.html" class="block text-gray-700 hover:text-purple-700">Vision</a>
+      <a href="mehr.html" class="block text-gray-700 hover:text-purple-700">Mehr</a>
+      <a href="token.html" class="block text-gray-700 hover:text-purple-700">Token</a>
+      <a href="fragen_und_bedenken.html" class="block text-gray-700 hover:text-purple-700">Fragen?</a>
+      <a href="#kontakt" class="block text-purple-700 font-semibold">Kontakt</a>
+    </div>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <!-- Hero -->
   <section class="relative flex flex-col items-center justify-start bg-gradient-to-br from-white to-purple-100 overflow-hidden text-center px-6 pt-12 pb-10">
     <div class="absolute top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
       <img src="reform-logo.png" alt="Re:Form Logo" class="w-2/3 max-w-xl opacity-10 zoom-bg slide-logo">
@@ -68,15 +98,6 @@
         Der Kapitalismus braucht ein Update.<br />
         Unsere Wirtschaft funktioniert – aber nicht mehr für das, was sie eigentlich schützen sollte.
       </p>
-      <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 fade-in-up"
-           style="animation-delay: 2s; animation-fill-mode: both;">
-        <a href="manifest.html" class="bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-800 transition">Unsere Vision</a>
-        <a href="#kontakt" class="bg-white text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-100 transition">Mitdenken</a>
-        <a href="mehr.html" class="bg-purple-100 text-purple-700 border border-purple-300 px-6 py-3 rounded-2xl shadow hover:bg-purple-200 transition">Mehr dazu</a>
-<a href="token.html" class="bg-yellow-100 text-yellow-800 border border-yellow-300 px-6 py-3 rounded-2xl shadow hover:bg-yellow-200 transition">
-  Re:Form Token</a>
-        <a href="fragen_und_bedenken.html" class="text-purple-700 underline">Fragen & Bedenken</a>
-      </div>
     </div>
   </section>
 
