@@ -64,11 +64,18 @@
 
 <!-- Hero -->
 <section class="relative flex flex-col items-center justify-start overflow-hidden text-center px-6 pt-24 pb-16">
-  <div class="relative z-10 flex flex-col items-center">
-    <!-- Centered floating logo inside text block -->
-    <img src="reform-logo.svg.png" alt="Re:Form Logo"
-         class="w-2/5 max-w-xs opacity-10 mb-[-40px] logo-float pointer-events-none" />
 
+  <!-- Schwebendes Logo mit Shine -->
+  <div class="relative w-full flex justify-center">
+    <div class="relative w-2/5 max-w-xs logo-wrapper">
+      <img src="reform-logo.svg" alt="Re:Form Logo"
+           class="w-full opacity-10 logo-float pointer-events-none" />
+      <div class="shine-glow"></div>
+    </div>
+  </div>
+
+  <!-- Text-Inhalt -->
+  <div class="relative z-10 mt-4">
     <h1 class="text-5xl md:text-6xl text-purple-900 fade-in-up"
         style="font-family: 'Rajdhani', sans-serif; font-weight: 700; animation-delay: 0.5s; animation-fill-mode: both;">
       Re:Form
@@ -83,31 +90,43 @@
   </div>
 </section>
 
-<!-- Float animation -->
-<style>
-  @keyframes float {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(8px); }
-    100% { transform: translateY(0); }
-  }
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
 
-  .logo-float {
-    animation: float 12s ease-in-out infinite;
-  }
-</style>
+.logo-float {
+  animation: float 12s ease-in-out infinite;
+}
 
-<!-- Animation style -->
-<style>
-  @keyframes float {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(8px); }
-    100% { transform: translateY(0); }
-  }
+/* Shine Effekt */
+.logo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-  .logo-float {
-    animation: float 12s ease-in-out infinite;
-  }
-</style>
+.shine-glow {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  animation: shine-once 2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes shine-once {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
 
   <!-- Drei Vorteile -->
   <section class="px-6 py-16 bg-white">
