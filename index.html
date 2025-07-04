@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Re:Form – A Nova Era Begins</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+   <!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="theme-color" content="#6B21A8" />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap" rel="stylesheet" />
 
@@ -20,28 +20,29 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes shiny {
+      0%   { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+      50%  { filter: brightness(1.3) drop-shadow(0 0 6px #c084fc); transform: rotate(1deg) scale(1.05); }
+      100% { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+    }
+
+    @keyframes shiny-once {
+      0%   { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+      20%  { filter: brightness(1.4) drop-shadow(0 0 10px #c084fc); transform: rotate(1deg) scale(1.05); }
+      50%  { filter: brightness(1.1) drop-shadow(0 0 6px #c084fc); }
+      100% { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+    }
+
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(8px); }
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(8px); }
+      100% { transform: translateY(0); }
     }
 
-    @keyframes shine-once {
-      0%   { filter: brightness(1); }
-      50%  { filter: brightness(1.5) drop-shadow(0 0 8px #c084fc); }
-      100% { filter: brightness(1); }
-    }
-
-    .fade-in-up {
-      animation: fadeInUp 1s ease-out forwards;
-    }
-
-    .logo-float {
-      animation: float 12s ease-in-out infinite;
-    }
-
-    .shine-once {
-      animation: shine-once 2s ease-out forwards;
-    }
+    .fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+    .glow-logo { animation: shiny 4s ease-in-out infinite; }
+    .logo-float { animation: float 12s ease-in-out infinite; }
+    .animate-hero-glow { animation: shiny-once 2.5s ease-in-out forwards; }
   </style>
 </head>
 <body class="bg-gradient-to-br from-white to-purple-50 text-gray-900 leading-relaxed">
@@ -50,7 +51,7 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="flex items-center space-x-2">
-        <img src="reform-logo.svg.png" alt="Re:Form Logo" class="h-10 w-auto shine-once" />
+        <img src="reform-logo.svg.png" alt="Re:Form Logo" class="h-10 w-auto glow-logo" />
         <span class="text-purple-800 font-extrabold text-xl tracking-widest" style="font-family: 'Rajdhani', sans-serif;">Re:Form</span>
       </a>
       <nav class="hidden md:flex space-x-6 text-purple-800 font-medium">
@@ -58,7 +59,7 @@
         <a href="mehr.html" class="hover:text-purple-600 transition">Mehr</a>
         <a href="token.html" class="hover:text-purple-600 transition">Token</a>
         <a href="fragen_und_bedenken.html" class="hover:text-purple-600 transition">Fragen?</a>
-        <a href="#kontakt" class="bg-orange-400 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-xl shadow hover:shadow-lg transform hover:scale-105 transition">
+       <a href="#kontakt" class="bg-gradient-to-r from-orange-400 to-purple-600 text-white font-semibold px-4 py-2 rounded-xl shadow hover:shadow-lg hover:scale-105 transform transition">
   Mitdenken
 </a>
       </nav>
@@ -81,10 +82,15 @@
 
   <!-- Hero -->
   <section class="relative flex flex-col items-center justify-start overflow-hidden text-center px-6 pt-24 pb-16">
-    <!-- Schwebendes Logo -->
+
+    <!-- Schwebendes Logo mit einmaligem Shine -->
     <div class="absolute top-8 w-full flex justify-center">
-      <img src="reform-logo.svg.png" alt="Re:Form Logo"
-           class="w-1/3 max-w-xs opacity-10 pointer-events-none logo-float shine-once" />
+      <img
+        src="reform-logo.svg.png"
+        alt="Re:Form Logo"
+        class="w-1/3 max-w-xs opacity-10 pointer-events-none animate-hero-glow"
+        style="animation-delay: 0.3s;"
+      />
     </div>
 
     <!-- Text-Inhalt -->
