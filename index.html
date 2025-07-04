@@ -7,12 +7,8 @@
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="theme-color" content="#6B21A8" />
-  <meta name="msapplication-TileColor" content="#6B21A8" />
-  <meta name="msapplication-TileImage" content="favicon.png" />
 
   <!-- Rajdhani Font -->
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap" rel="stylesheet" />
@@ -23,36 +19,25 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes slowZoom {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
+    @keyframes shiny {
+      0%   { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+      50%  { filter: brightness(1.3) drop-shadow(0 0 6px #c084fc); transform: rotate(1deg) scale(1.05); }
+      100% { filter: brightness(1); transform: rotate(-1deg) scale(1); }
     }
 
-    @keyframes slideLogo {
-      0% { transform: translateX(-10px); }
-      50% { transform: translateX(10px); }
-      100% { transform: translateX(-10px); }
-    }
-
-    .fade-in-up {
-      opacity: 0;
-      animation: fadeInUp 1s ease-out forwards;
-    }
-
-    .zoom-bg {
-      animation: slowZoom 10s ease-in-out infinite alternate;
-    }
-
-    .slide-logo {
-      animation: slideLogo 20s ease-in-out infinite;
-    }
+    .fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+    .logo-animated { animation: shiny 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="bg-gradient-to-br from-white to-purple-50 text-gray-900 leading-relaxed">
 
   <!-- Navigation -->
   <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end items-center">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="reform-logo.png" alt="Re:Form Logo" class="h-10 w-auto logo-animated">
+        <span class="text-purple-800 font-extrabold text-xl tracking-widest" style="font-family: 'Rajdhani', sans-serif;">Re:Form</span>
+      </a>
       <nav class="hidden md:flex space-x-6 text-purple-800 font-medium">
         <a href="manifest.html" class="hover:text-purple-600 transition">Vision</a>
         <a href="mehr.html" class="hover:text-purple-600 transition">Mehr</a>
@@ -112,7 +97,7 @@
     </div>
   </section>
 
-  <!-- Manifest-Kurzfassung -->
+  <!-- Manifest -->
   <section id="manifest" class="py-20 pb-16 px-4 bg-purple-50 text-center">
     <h2 class="text-3xl font-bold text-purple-800 mb-6">Einführung</h2>
     <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
