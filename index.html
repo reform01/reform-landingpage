@@ -23,42 +23,23 @@
       100% { filter: brightness(1); transform: rotate(-1deg) scale(1); }
     }
 
+    @keyframes shiny-once {
+      0%   { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+      20%  { filter: brightness(1.4) drop-shadow(0 0 10px #c084fc); transform: rotate(1deg) scale(1.05); }
+      50%  { filter: brightness(1.1) drop-shadow(0 0 6px #c084fc); }
+      100% { filter: brightness(1); transform: rotate(-1deg) scale(1); }
+    }
+
     @keyframes float {
       0%   { transform: translateY(0); }
       50%  { transform: translateY(8px); }
       100% { transform: translateY(0); }
     }
 
-    @keyframes shine-once {
-      0%   { left: -100%; opacity: 0; }
-      10%  { opacity: 1; }
-      50%  { opacity: 1; }
-      100% { left: 100%; opacity: 0; }
-    }
-
     .fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-    .logo-float { animation: float 12s ease-in-out infinite; }
     .glow-logo { animation: shiny 4s ease-in-out infinite; }
-
-    .logo-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shine-glow {
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 200%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .animate-shine-once {
-      animation: shine-once 2s ease-out forwards;
-    }
+    .logo-float { animation: float 12s ease-in-out infinite; }
+    .animate-hero-glow { animation: shiny-once 2.5s ease-in-out forwards; }
   </style>
 </head>
 <body class="bg-gradient-to-br from-white to-purple-50 text-gray-900 leading-relaxed">
@@ -97,12 +78,14 @@
   <!-- Hero -->
   <section class="relative flex flex-col items-center justify-start overflow-hidden text-center px-6 pt-24 pb-16">
 
-    <!-- Schwebendes Logo mit Shine -->
+    <!-- Schwebendes Logo mit einmaligem Shine -->
     <div class="absolute top-8 w-full flex justify-center">
-      <div class="relative w-1/3 max-w-xs logo-wrapper">
-        <img src="reform-logo.svg.png" alt="Re:Form Logo" class="w-full opacity-10 logo-float pointer-events-none" />
-        <div class="shine-glow animate-shine-once"></div>
-      </div>
+      <img
+        src="reform-logo.svg.png"
+        alt="Re:Form Logo"
+        class="w-1/3 max-w-xs opacity-10 pointer-events-none animate-hero-glow"
+        style="animation-delay: 0.3s;"
+      />
     </div>
 
     <!-- Text-Inhalt -->
@@ -169,16 +152,5 @@
     <a href="impressum.html" class="underline text-purple-700 hover:text-purple-900">Impressum & Datenschutz</a>
   </footer>
 
-  <!-- Shine-Effekt neu starten bei jedem Laden -->
-  <script>
-    window.addEventListener('load', () => {
-      const shine = document.querySelector('.shine-glow');
-      if (shine) {
-        shine.classList.remove('animate-shine-once');
-        void shine.offsetWidth;
-        shine.classList.add('animate-shine-once');
-      }
-    });
-  </script>
 </body>
 </html>
